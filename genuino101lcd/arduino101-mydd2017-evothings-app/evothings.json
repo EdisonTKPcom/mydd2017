@@ -1,0 +1,27 @@
+{
+  "name": "arduino101-mydd2017-evothings-app",
+  "version": "1.0",
+  "title": "Arduino101 LED On/Off BLE",
+  "description": "Simple app to get stated with the Arduino/Genuino 101 Bluetooth Low Energy (BLE) communication",
+  "tags": [
+    {
+      "label": "arduino",
+      "type": "platform"
+    },
+    {
+      "label": "ble",
+      "type": "comm"
+    }
+  ],
+  "libraries": [
+    {
+      "name": "jquery",
+      "version": "2.1.1"
+    }
+  ],
+  "index-file": "index.html",
+  "app-dir": "app",
+  "uuid": "6f6cb31d-1ca0-4079-8eb2-136ecefc2c25",
+  "icon": "app-icon.png",
+  "doc-url": "https://evothings.com/2.1/doc/examples/arduino101-led-onoff.html"
+}
