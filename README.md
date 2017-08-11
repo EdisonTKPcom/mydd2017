@@ -6,8 +6,12 @@
 * Team Name
 
 * Tech stack
+Android 
 
 * Hardware
+Arduino 101 Bluetooth
+LCD 2X16
+Servo
 
 
 * Team Members
