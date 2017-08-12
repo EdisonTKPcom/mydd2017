@@ -179,7 +179,7 @@ void loop()
           case 3:
             clear();
             lcd.setCursor(0,0); 
-            lcd.print("Halo, IoT World!");
+            lcd.print("Halo, MYDD 2017!");
             break;
           default:
             if (switchCharacteristic.value()) {   // any value other than 0
