@@ -88,12 +88,12 @@ using BLE (Bluetooth Low Energy).
 
 	app.iLoveYou = function()
 	{
-		app.device && app.device.writeDataArray(new Uint8Array([0]), '19b10001-e8f2-537e-4f6c-d104768a1214');
+		app.device && app.device.writeDataArray(new Uint8Array([2]), '19b10001-e8f2-537e-4f6c-d104768a1214');
 	}
 
 	app.haloIoTWorld = function()
 	{
-		app.device && app.device.writeDataArray(new Uint8Array([0]), '19b10001-e8f2-537e-4f6c-d104768a1214');
+		app.device && app.device.writeDataArray(new Uint8Array([3]), '19b10001-e8f2-537e-4f6c-d104768a1214');
 	}
 
 	app.showMessage = function(info)
