@@ -408,11 +408,21 @@
 <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <div id="map" style=" height: 600px;"></div>    <script>
 var locations = [
-  ['A',2.9211559,101.6570143 , 4],
-  ['B', 2.9211569,101.657243, 5],
-  ['C',2.9211569,101.657243, 3],
-  ['D', 2.9211570,101.657243, 2],
-  ['E',2.9211568,101.657244, 1]
+  ['A',2.922988145566423, 101.65819447196657 , 4],
+  ['B',2.9213176234148115, 101.65714644047546, 5],
+  ['C',2.9223783973755095, 101.6550650462799, 3],
+  ['D', 2.9226892289518145, 101.6564705238037, 2],
+  ['E',2.921113940418821, 101.65847781614684, 1],
+  ['F',2.922742603353118, 101.65606382803344, 6],
+  ['G',2.9243712639237662, 101.65751222090148, 7],
+  ['H',2.92377123135703, 101.66166428045653, 8],
+  ['I',2.9234819298262504, 101.65991548017882, 9],
+  ['J',2.9218854126296376, 101.65327433065795, 10],
+  ['K',2.9200745950745515, 101.65579560713195, 11],
+  ['L',2.92042818689757, 101.65507677511596, 12],
+  ['M',2.9213068085212184, 101.65444377378844, 13],
+  ['N',2.919378126006724, 101.65401462034606, 14],
+  ['O',2.9207174892154093, 101.65241602377318, 15]
 ];
 
 var map = new google.maps.Map(document.getElementById('map'), {
@@ -429,7 +439,8 @@ var markers = [];
 for (i = 0; i < locations.length; i++) {  
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-    map: map
+    map: map,
+    draggable: true,
   });
 
   markers.push(marker);
@@ -438,7 +449,7 @@ for (i = 0; i < locations.length; i++) {
 
   google.maps.event.addListener(marker, 'click', (function(marker, i) {
     return function() {
-      infowindow.setContent(locations[i][0]);
+      infowindow.setContent(locations[i][0] + marker.getPosition());
       infowindow.open(map, marker);
     }
   })(marker, i));
